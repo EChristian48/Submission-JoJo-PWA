@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jojo's Bizarre App" />
+    <meta name="theme-color" content="#D32F2F" />
+
+    <title>Jojo's App</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon16.png" />
+
+    <link rel="stylesheet" href="./css/materialize.min.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <header>
+      <nav class="red darken-1" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo" id="logo-container">Jojo's App</a>
+          <a href="#" class="sidenav-trigger" data-target="nav-mobile"
+            ><i class="material-icons">menu</i></a
+          >
+
+          <ul class="topnav right hide-on-med-and-down"></ul>
+          <ul class="sidenav" id="nav-mobile"></ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Nav End -->
+
+    <div class="container" id="body-content"></div>
+
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script>      
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", async () => {
+          try {
+            await navigator.serviceWorker.register("./service-worker.js");
+            console.log("Service Worker berhasil di-register");
+          } catch (error) {
+            console.error(`Service Worker gagal didaftarkan: ${error}`);
+          }
+        });
+      } else {
+        console.error("Service Worker tidak didukung browser ini.");
+      }
+    </script>
+  </body>
+</html>

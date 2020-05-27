@@ -1,0 +1,21 @@
+{
+  "name": "Jojo's Bizarre App",
+  "short_name": "JJBApp",
+  "description": "Application about Jojo's Bizzare Adventure",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#D32F2F",
+  "theme_color": "#D32F2F",
+  "icons": [
+    {
+      "src": "./img/icons/icon192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
